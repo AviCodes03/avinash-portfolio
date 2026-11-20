@@ -66,7 +66,6 @@ const certificatesCollection: CertificateItem[] = [
     isFeatured: true,
     featuredRank: 4,
     detail: 'Certificate of Appreciation for Organising',
-    rotateClass: '-rotate-90',
   },
   {
     id: 'imarticus-business-comm',
@@ -384,7 +383,7 @@ export const Certificates: React.FC = () => {
                         onClick={() => setPreviewCert(cert)}
                         className="cursor-pointer group/thumb relative rounded-xl overflow-hidden border border-purple-500/20 bg-[#09090f]"
                       >
-                        <div className="relative w-full h-32 sm:h-36 overflow-hidden bg-[#0a0a14] flex items-center justify-center p-1.5">
+                        <div className="relative w-full aspect-[16/9] overflow-hidden bg-[#0a0a14] flex items-center justify-center p-1.5">
                           <img
                             src={getCertificatePath(cert.imageFileName)}
                             alt={`${cert.title} Certificate`}

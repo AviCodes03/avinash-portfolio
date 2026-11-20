@@ -14,6 +14,7 @@ const navItems: NavItem[] = [
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'Certificates', href: '#certificates' },
+  { name: 'GSA Journey', href: '#gsa' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -26,7 +27,7 @@ export const Navbar: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      // Determine current section in view
+      // Determine current section in view on homepage
       const sections = navItems.map((item) => item.href.substring(1));
       const currentPos = window.scrollY + 140;
 

@@ -7,6 +7,7 @@ import { Education } from './components/Education';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Certificates } from './components/Certificates';
+import { GsaJourney } from './components/GsaJourney';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
@@ -19,31 +20,34 @@ export const App: React.FC = () => {
       {/* Navigation Bar */}
       <Navbar />
 
-      {/* Main Content Area */}
+      {/* Main Content Area - 8 Ordered Homepage Sections */}
       <main className="relative z-10 flex-grow">
-        {/* Hero Section */}
+        {/* 1. Hero Section */}
         <Hero />
 
-        {/* About Section */}
+        {/* 2. About Section */}
         <About />
 
-        {/* Education Section */}
+        {/* 3. Education Section */}
         <Education />
 
-        {/* Technical Skills Section */}
+        {/* 4. Technical Skills Section */}
         <Skills />
 
-        {/* Featured Projects Section */}
+        {/* 5. Featured Projects Section */}
         <Projects />
 
-        {/* Certifications & Achievements Section */}
+        {/* 6. Certifications & Achievements Section */}
         <Certificates />
 
-        {/* Contact Section */}
+        {/* 7. Google Student Ambassador 2026 Journey (INLINE SECTION) */}
+        <GsaJourney />
+
+        {/* 8. Contact Section */}
         <Contact />
       </main>
 
-      {/* Professional Footer */}
+      {/* 9. Professional Footer */}
       <Footer />
     </div>
   );
