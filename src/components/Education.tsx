@@ -30,7 +30,7 @@ export const Education: React.FC = () => {
     <section
       id="education"
       aria-label="Education"
-      className="relative py-20 lg:py-28 scroll-mt-24 overflow-hidden"
+      className="relative py-10 sm:py-16 lg:py-28 scroll-mt-24 overflow-hidden"
     >
       {/* Ambient background purple glow */}
       <div
@@ -45,17 +45,17 @@ export const Education: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="text-center mb-14 sm:mb-16 space-y-3"
+          className="text-center mb-8 sm:mb-12 lg:mb-16 space-y-2.5 sm:space-y-3"
         >
           <motion.div variants={itemVariants}>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/40 border border-purple-500/30 text-purple-200 text-xs sm:text-sm font-semibold tracking-wider uppercase font-display backdrop-blur-md shadow-[0_0_15px_rgba(168,85,247,0.15)]">
+            <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-purple-950/40 border border-purple-500/30 text-purple-200 text-xs sm:text-sm font-semibold tracking-wider uppercase font-display backdrop-blur-md shadow-[0_0_15px_rgba(168,85,247,0.15)]">
               <Sparkles className="w-3.5 h-3.5 text-purple-400" />
               <span>MY LEARNING JOURNEY</span>
             </div>
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
               Academic{' '}
               <span className="gradient-text-purple inline-block">
                 Foundation.
@@ -64,7 +64,7 @@ export const Education: React.FC = () => {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <p className="text-slate-400 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+            <p className="text-slate-400 text-sm sm:text-base lg:text-lg max-w-xl mx-auto leading-relaxed">
               Formal education and theoretical groundwork in artificial intelligence and computing systems.
             </p>
           </motion.div>
@@ -88,16 +88,16 @@ export const Education: React.FC = () => {
           <div className="relative flex flex-col sm:flex-row items-start sm:gap-8">
             
             {/* Timeline Marker Node */}
-            <div className="flex items-center gap-4 sm:flex-col sm:items-center sm:gap-0 shrink-0 mb-4 sm:mb-0">
-              <div className="relative flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-[#0e0e1a] border border-purple-500/40 text-purple-300 shadow-[0_0_25px_rgba(168,85,247,0.25)] backdrop-blur-md">
-                <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-purple-300" />
+            <div className="flex items-center gap-3 sm:flex-col sm:items-center sm:gap-0 shrink-0 mb-3 sm:mb-0">
+              <div className="relative flex items-center justify-center w-11 h-11 sm:w-16 sm:h-16 rounded-2xl bg-[#0e0e1a] border border-purple-500/40 text-purple-300 shadow-[0_0_25px_rgba(168,85,247,0.25)] backdrop-blur-md">
+                <GraduationCap className="w-5 h-5 sm:w-8 sm:h-8 text-purple-300" />
                 {/* Subtle pulsing live indicator dot */}
-                <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+                <span className="absolute -top-1 -right-1 flex h-3 sm:h-3.5 w-3 sm:w-3.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-gradient-to-r from-violet-400 to-purple-500 border-2 border-[#09090f]" />
+                  <span className="relative inline-flex rounded-full h-3 sm:h-3.5 w-3 sm:w-3.5 bg-gradient-to-r from-violet-400 to-purple-500 border-2 border-[#09090f]" />
                 </span>
               </div>
-              <span className="sm:hidden text-xs font-semibold uppercase tracking-wider text-purple-300 bg-purple-950/60 px-2.5 py-1 rounded-full border border-purple-500/30">
+              <span className="sm:hidden text-[11px] font-semibold uppercase tracking-wider text-purple-300 bg-purple-950/60 px-2.5 py-1 rounded-full border border-purple-500/30">
                 Current Education
               </span>
             </div>
@@ -105,49 +105,49 @@ export const Education: React.FC = () => {
             {/* Education Glass Card */}
             <div className="w-full relative group">
               {/* Outer gradient glow border */}
-              <div className="relative p-[1px] rounded-3xl bg-gradient-to-b from-purple-400/40 via-violet-600/20 to-purple-950/20 shadow-[0_0_40px_rgba(139,92,246,0.15)] group-hover:shadow-[0_0_60px_rgba(168,85,247,0.28)] transition-all duration-500">
+              <div className="relative p-[1px] rounded-2xl sm:rounded-3xl bg-gradient-to-b from-purple-400/40 via-violet-600/20 to-purple-950/20 shadow-[0_0_40px_rgba(139,92,246,0.15)] group-hover:shadow-[0_0_60px_rgba(168,85,247,0.28)] transition-all duration-500">
                 
                 {/* Inner Card */}
-                <div className="relative p-6 sm:p-8 rounded-[23px] bg-[#0c0c16]/95 border border-purple-500/15 backdrop-blur-xl space-y-6">
+                <div className="relative p-4 sm:p-6 lg:p-8 rounded-[20px] sm:rounded-[23px] bg-[#0c0c16]/95 border border-purple-500/15 backdrop-blur-xl space-y-4 sm:space-y-6">
                   
                   {/* Top Bar: Year & Institution Type Badges */}
-                  <div className="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-purple-500/15">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-200 text-xs sm:text-sm font-semibold">
+                  <div className="flex flex-wrap items-center justify-between gap-2.5 pb-4 sm:pb-5 border-b border-purple-500/15">
+                    <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-200 text-xs sm:text-sm font-semibold">
                       <span className="w-2 h-2 rounded-full bg-purple-400 shadow-[0_0_8px_#c084fc]" />
                       <span>Second Year (Current)</span>
                     </div>
 
-                    <span className="px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] text-xs font-medium text-slate-300">
+                    <span className="px-2.5 sm:px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] text-[11px] sm:text-xs font-medium text-slate-300">
                       Autonomous Institute
                     </span>
                   </div>
 
                   {/* Degree & Specialization */}
-                  <div className="space-y-1.5">
-                    <div className="text-sm sm:text-base font-semibold text-slate-300 uppercase tracking-wider font-display">
+                  <div className="space-y-1 sm:space-y-1.5">
+                    <div className="text-xs sm:text-sm lg:text-base font-semibold text-slate-300 uppercase tracking-wider font-display">
                       Bachelor of Technology (B.Tech)
                     </div>
-                    <h3 className="text-2xl sm:text-3xl font-extrabold gradient-text-purple tracking-tight leading-tight">
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold gradient-text-purple tracking-tight leading-tight">
                       Artificial Intelligence and Data Science
                     </h3>
                   </div>
 
                   {/* Institution Details */}
-                  <div className="space-y-3 pt-2 text-slate-300">
-                    <div className="flex items-start gap-3">
-                      <Building2 className="w-5 h-5 text-purple-400 shrink-0 mt-0.5" />
+                  <div className="space-y-2.5 sm:space-y-3 pt-1 sm:pt-2 text-slate-300">
+                    <div className="flex items-start gap-2.5 sm:gap-3">
+                      <Building2 className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-base sm:text-lg font-semibold text-white">
+                        <p className="text-sm sm:text-base lg:text-lg font-semibold text-white">
                           Dr. D. Y. Patil College of Engineering & Innovation
                         </p>
-                        <div className="flex items-center gap-1.5 text-sm text-slate-400 mt-0.5">
-                          <MapPin className="w-4 h-4 text-purple-400/80 shrink-0" />
+                        <div className="flex items-center gap-1.5 text-xs sm:text-sm text-slate-400 mt-0.5">
+                          <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-purple-400/80 shrink-0" />
                           <span>Varale, Pune, Maharashtra</span>
                         </div>
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-3 pt-1">
+                    <div className="flex items-center gap-2.5 sm:gap-3 pt-0.5 sm:pt-1">
                       <Award className="w-5 h-5 text-violet-400 shrink-0" />
                       <p className="text-sm sm:text-base text-slate-300">
                         <span className="text-slate-400">Affiliation: </span>

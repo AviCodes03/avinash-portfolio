@@ -141,7 +141,7 @@ export const Projects: React.FC = () => {
     <section
       id="projects"
       aria-label="Featured Projects"
-      className="relative py-20 lg:py-28 scroll-mt-24 overflow-hidden"
+      className="relative py-10 sm:py-16 lg:py-28 scroll-mt-24 overflow-hidden"
     >
       {/* Ambient background glow */}
       <div
@@ -156,21 +156,21 @@ export const Projects: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-14 sm:mb-16 space-y-3"
+          className="text-center mb-8 sm:mb-12 lg:mb-16 space-y-2.5 sm:space-y-3"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/40 border border-purple-500/30 text-purple-200 text-xs sm:text-sm font-semibold tracking-wider uppercase font-display backdrop-blur-md shadow-[0_0_15px_rgba(168,85,247,0.15)]">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-purple-950/40 border border-purple-500/30 text-purple-200 text-xs sm:text-sm font-semibold tracking-wider uppercase font-display backdrop-blur-md shadow-[0_0_15px_rgba(168,85,247,0.15)]">
             <Sparkles className="w-3.5 h-3.5 text-purple-400" />
             <span>WHAT I'VE BUILT</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
             Featured{' '}
             <span className="gradient-text-purple inline-block">
               Projects.
             </span>
           </h2>
 
-          <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-400 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
             A collection of projects where curiosity meets practical problem-solving.
           </p>
         </motion.div>
@@ -181,7 +181,7 @@ export const Projects: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8"
         >
           {projectsData.map((project, index) => {
             const Icon = project.icon;
@@ -194,20 +194,20 @@ export const Projects: React.FC = () => {
                 className={`group relative ${isFullWidthOnLarge ? 'md:col-span-2 lg:max-w-3xl lg:mx-auto w-full' : ''}`}
               >
                 {/* Outer gradient glow container */}
-                <div className="relative p-[1px] rounded-3xl bg-gradient-to-b from-purple-400/35 via-violet-600/15 to-purple-950/20 shadow-[0_0_35px_rgba(139,92,246,0.12)] group-hover:shadow-[0_0_55px_rgba(168,85,247,0.25)] transition-all duration-400 h-full">
+                <div className="relative p-[1px] rounded-2xl sm:rounded-3xl bg-gradient-to-b from-purple-400/35 via-violet-600/15 to-purple-950/20 shadow-[0_0_35px_rgba(139,92,246,0.12)] group-hover:shadow-[0_0_55px_rgba(168,85,247,0.25)] transition-all duration-400 h-full">
                   
                   {/* Inner glass card */}
-                  <div className="p-6 sm:p-8 rounded-[23px] bg-[#0c0c16]/95 border border-purple-500/15 backdrop-blur-xl h-full flex flex-col justify-between space-y-6">
+                  <div className="p-4 sm:p-6 lg:p-8 rounded-[20px] sm:rounded-[23px] bg-[#0c0c16]/95 border border-purple-500/15 backdrop-blur-xl h-full flex flex-col justify-between space-y-4 sm:space-y-6">
                     
                     {/* Top Row: Number, Icon & Category Badge */}
-                    <div className="flex items-center justify-between gap-3">
-                      <div className="flex items-center gap-3">
+                    <div className="flex items-center justify-between gap-2.5">
+                      <div className="flex items-center gap-2.5 sm:gap-3">
                         <div
-                          className={`p-2.5 rounded-xl bg-gradient-to-br ${project.accentGradient} border ${project.borderColor} ${project.iconColor} transition-transform duration-300 group-hover:scale-105`}
+                          className={`p-2 sm:p-2.5 rounded-xl bg-gradient-to-br ${project.accentGradient} border ${project.borderColor} ${project.iconColor} transition-transform duration-300 group-hover:scale-105`}
                         >
-                          <Icon className="w-5 h-5" />
+                          <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                         </div>
-                        <span className="font-display font-bold text-sm tracking-widest text-purple-400 bg-purple-950/50 border border-purple-500/25 px-2.5 py-1 rounded-full">
+                        <span className="font-display font-bold text-xs sm:text-sm tracking-widest text-purple-400 bg-purple-950/50 border border-purple-500/25 px-2.5 py-0.5 sm:py-1 rounded-full">
                           {project.number}
                         </span>
                       </div>
@@ -219,22 +219,22 @@ export const Projects: React.FC = () => {
                             <span>Team Project</span>
                           </span>
                         )}
-                        <span className="px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] text-xs font-medium text-slate-300">
+                        <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/[0.03] border border-white/[0.08] text-[11px] sm:text-xs font-medium text-slate-300">
                           {project.categoryBadge}
                         </span>
                       </div>
                     </div>
 
                     {/* Middle: Title & Description */}
-                    <div className="space-y-3">
-                      <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-purple-200 transition-colors font-display tracking-tight">
+                    <div className="space-y-2 sm:space-y-3">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white group-hover:text-purple-200 transition-colors font-display tracking-tight">
                         {project.title}
                       </h3>
-                      <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                      <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
                         {project.description}
                       </p>
                       {project.isTeamProject && (
-                        <p className="text-xs text-purple-300/80 italic">
+                        <p className="text-[11px] sm:text-xs text-purple-300/80 italic">
                           * Collaborative team project developed for the VORTEXA 3.0 hackathon.
                         </p>
                       )}
@@ -242,12 +242,12 @@ export const Projects: React.FC = () => {
 
                     {/* Tech Stack Tags */}
                     {project.technologies.length > 0 && (
-                      <div className="pt-2">
-                        <div className="flex flex-wrap gap-2">
+                      <div className="pt-1 sm:pt-2">
+                        <div className="flex flex-wrap gap-1.5 sm:gap-2">
                           {project.technologies.map((tech) => (
                             <span
                               key={tech}
-                              className="px-2.5 py-1 rounded-lg bg-white/[0.03] border border-white/[0.06] text-xs font-medium text-purple-200/90 group-hover:border-purple-500/30 transition-colors"
+                              className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg bg-white/[0.03] border border-white/[0.06] text-[11px] sm:text-xs font-medium text-purple-200/90 group-hover:border-purple-500/30 transition-colors"
                             >
                               {tech}
                             </span>
@@ -257,14 +257,14 @@ export const Projects: React.FC = () => {
                     )}
 
                     {/* Action Links: GitHub & Optional Live Demo */}
-                    <div className="pt-4 border-t border-purple-500/15 flex flex-wrap items-center gap-3">
+                    <div className="pt-3 sm:pt-4 border-t border-purple-500/15 flex flex-wrap items-center gap-2.5 sm:gap-3">
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-200 bg-white/[0.04] hover:bg-purple-500/20 border border-white/[0.1] hover:border-purple-500/40 transition-all duration-300 shadow-sm hover:scale-[1.02] active:scale-[0.98]"
+                        className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-200 bg-white/[0.04] hover:bg-purple-500/20 border border-white/[0.1] hover:border-purple-500/40 transition-all duration-300 shadow-sm hover:scale-[1.02] active:scale-[0.98]"
                       >
-                        <GithubIcon className="w-4 h-4 text-purple-300" />
+                        <GithubIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-purple-300" />
                         <span>GitHub</span>
                       </a>
 
@@ -273,7 +273,7 @@ export const Projects: React.FC = () => {
                           href={project.liveDemoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 shadow-[0_0_15px_rgba(147,51,234,0.3)] hover:shadow-[0_0_25px_rgba(168,85,247,0.45)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 shadow-[0_0_15px_rgba(147,51,234,0.3)] hover:shadow-[0_0_25px_rgba(168,85,247,0.45)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                         >
                           <span>Live Demo</span>
                           <ExternalLink className="w-3.5 h-3.5 text-purple-200" />

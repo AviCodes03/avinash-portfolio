@@ -125,7 +125,7 @@ export const Skills: React.FC = () => {
     <section
       id="skills"
       aria-label="Technical Skills"
-      className="relative py-20 lg:py-28 scroll-mt-24 overflow-hidden"
+      className="relative py-10 sm:py-16 lg:py-28 scroll-mt-24 overflow-hidden"
     >
       {/* Ambient background glow */}
       <div
@@ -140,32 +140,32 @@ export const Skills: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-14 sm:mb-16 space-y-3"
+          className="text-center mb-8 sm:mb-12 lg:mb-16 space-y-2.5 sm:space-y-3"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/40 border border-purple-500/30 text-purple-200 text-xs sm:text-sm font-semibold tracking-wider uppercase font-display backdrop-blur-md shadow-[0_0_15px_rgba(168,85,247,0.15)]">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-purple-950/40 border border-purple-500/30 text-purple-200 text-xs sm:text-sm font-semibold tracking-wider uppercase font-display backdrop-blur-md shadow-[0_0_15px_rgba(168,85,247,0.15)]">
             <Sparkles className="w-3.5 h-3.5 text-purple-400" />
             <span>WHAT I WORK WITH</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
             Technical{' '}
             <span className="gradient-text-purple inline-block">
               Skills.
             </span>
           </h2>
 
-          <p className="text-slate-400 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-slate-400 text-sm sm:text-base lg:text-lg max-w-xl mx-auto leading-relaxed">
             Core programming languages, AI domains, modern web tools and development environments.
           </p>
         </motion.div>
 
-        {/* 4 Skill Category Cards Grid */}
+        {/* 4 Skill Category Cards Grid - Responsive 2-column on >= 480px & sm */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
+          className="grid grid-cols-1 min-[480px]:grid-cols-2 md:grid-cols-2 gap-3.5 sm:gap-5 lg:gap-8"
         >
           {skillCategories.map((category) => {
             const CategoryIcon = category.icon;
@@ -176,41 +176,41 @@ export const Skills: React.FC = () => {
                 className="group relative"
               >
                 {/* Outer border gradient container */}
-                <div className="relative p-[1px] rounded-3xl bg-gradient-to-b from-purple-400/35 via-violet-600/15 to-purple-950/20 shadow-[0_0_35px_rgba(139,92,246,0.12)] group-hover:shadow-[0_0_55px_rgba(168,85,247,0.25)] transition-all duration-400 h-full">
+                <div className="relative p-[1px] rounded-2xl sm:rounded-3xl bg-gradient-to-b from-purple-400/35 via-violet-600/15 to-purple-950/20 shadow-[0_0_35px_rgba(139,92,246,0.12)] group-hover:shadow-[0_0_55px_rgba(168,85,247,0.25)] transition-all duration-400 h-full">
                   {/* Inner glass card */}
-                  <div className="p-6 sm:p-7 rounded-[23px] bg-[#0c0c16]/95 border border-purple-500/15 backdrop-blur-xl h-full flex flex-col justify-between space-y-5">
+                  <div className="p-4 sm:p-5 lg:p-7 rounded-[20px] sm:rounded-[23px] bg-[#0c0c16]/95 border border-purple-500/15 backdrop-blur-xl h-full flex flex-col justify-between space-y-3.5 sm:space-y-5">
                     
                     {/* Category Header */}
-                    <div className="flex items-center justify-between pb-4 border-b border-purple-500/15">
-                      <div className="flex items-center gap-3">
+                    <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-purple-500/15">
+                      <div className="flex items-center gap-2 sm:gap-3">
                         <div
-                          className={`p-2.5 rounded-xl bg-gradient-to-br ${category.accent} border border-purple-500/25 ${category.iconColor} transition-transform duration-300 group-hover:scale-105`}
+                          className={`p-2 sm:p-2.5 rounded-xl bg-gradient-to-br ${category.accent} border border-purple-500/25 ${category.iconColor} transition-transform duration-300 group-hover:scale-105`}
                         >
-                          <CategoryIcon className="w-5 h-5" />
+                          <CategoryIcon className="w-4 h-4 sm:w-5 sm:h-5" />
                         </div>
-                        <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-purple-200 transition-colors font-display">
+                        <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white group-hover:text-purple-200 transition-colors font-display">
                           {category.title}
                         </h3>
                       </div>
 
-                      <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-950/60 border border-purple-500/25 text-purple-300">
+                      <span className="text-[11px] sm:text-xs font-semibold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-purple-950/60 border border-purple-500/25 text-purple-300">
                         {category.skills.length} Skills
                       </span>
                     </div>
 
                     {/* Skill Items Grid */}
-                    <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
+                    <div className="grid grid-cols-2 gap-2 sm:gap-2.5 lg:gap-3">
                       {category.skills.map((skill) => {
                         const SkillIcon = skill.icon;
                         return (
                           <div
                             key={skill.name}
-                            className="flex items-center gap-2.5 p-3 rounded-xl bg-white/[0.02] hover:bg-purple-950/25 border border-white/[0.06] hover:border-purple-500/40 transition-all duration-300 group/item cursor-default"
+                            className="flex items-center gap-2 sm:gap-2.5 p-2 sm:p-2.5 lg:p-3 rounded-xl bg-white/[0.02] hover:bg-purple-950/25 border border-white/[0.06] hover:border-purple-500/40 transition-all duration-300 group/item cursor-default"
                           >
-                            <div className="p-1.5 rounded-lg bg-purple-500/10 text-purple-300 group-hover/item:text-purple-200 group-hover/item:bg-purple-500/20 transition-colors shrink-0">
-                              <SkillIcon className="w-4 h-4" />
+                            <div className="p-1 sm:p-1.5 rounded-lg bg-purple-500/10 text-purple-300 group-hover/item:text-purple-200 group-hover/item:bg-purple-500/20 transition-colors shrink-0">
+                              <SkillIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                             </div>
-                            <span className="text-xs sm:text-sm font-medium text-slate-200 group-hover/item:text-white transition-colors truncate">
+                            <span className="text-[11px] sm:text-xs lg:text-sm font-medium text-slate-200 group-hover/item:text-white transition-colors truncate">
                               {skill.name}
                             </span>
                           </div>
