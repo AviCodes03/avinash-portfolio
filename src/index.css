@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: #f8fafc;
+  background-color: #09090f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #09090f;
+  overflow-x: hidden;
+}
+
+/* Custom font utilities */
+.font-display {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090f;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e1b4b;
+  border-radius: 9999px;
+  border: 2px solid #09090f;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4338ca;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(13, 13, 23, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+}
+
+.glass-nav {
+  background: rgba(9, 9, 15, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.12);
+}
+
+/* Purple text gradients */
+.gradient-text-purple {
+  background: linear-gradient(135deg, #e9d5ff 0%, #c084fc 35%, #9333ea 70%, #7e22ce 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-text-glow {
+  background: linear-gradient(135deg, #ffffff 0%, #d8b4fe 40%, #a855f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Radial purple glow */
+.purple-glow-soft {
+  box-shadow: 0 0 60px 10px rgba(147, 51, 234, 0.18);
+}
+
+.purple-glow-strong {
+  box-shadow: 0 0 80px 20px rgba(147, 51, 234, 0.28);
+}
+
+/* Subtle background tech grid */
+.tech-grid-pattern {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(168, 85, 247, 0.08) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+
+.purple-glow-strong {
+  box-shadow: 0 0 80px 20px rgba(147, 51, 234, 0.28);
+}
+
+/* Subtle background tech grid */
+.tech-grid-pattern {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(168, 85, 247, 0.08) 1px, transparent 0);
+  background-size: 32px 32px;
+}
